@@ -10,16 +10,17 @@ FastNode (FNode) — консольное приложение для замет
 
 
 Команды:
-  wfnode <текст> \#тег1 \#тег2  — добавить заметку (\# экранирует shell-комментарий)
-  fnode \#тег1 \#тег2                   — найти по тегам  (AND-логика)
-  fnode                                       — все заметки
-  dfnode <id>                                 — удалить заметку по ID (виден в fnode как [id])
+  wfnode <текст> \#тег1 \#тег2  — добавить заметку
+  
+  fnode \#тег1 \#тег2 — найти по тегам  (AND-логика)
+  fnode — все заметки
+  dfnode <id> — удалить заметку по ID (виден в fnode как [id])
 
-Вывод fnode: [id] текст — ID в квадратных скобках для dfnode
+Вывод fnode: [id] текст 
 
 Хранение: ~/.fastnode/data.json
 
 Автозапуск при старте: systemd user service (Type=oneshot)
   — создаёт symlink'и wfnode, fnode, dfnode в ~/.local/bin/
-
+  
 Установка: bash install.sh
